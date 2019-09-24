@@ -22,15 +22,19 @@ public class BinomioDeNewton {
 		double res = 0;
 		double xAux = 1;
 		for(int k = 0; k <= n; k++) {
-			res += (getTermino(k) * xAux); 
+			res += (getTerminoBueno(k) * xAux); 
 			xAux *= x;
 		}
 		return res;
 	}
 	
-	public double getTermino(int k) {
+	public double getTerminoBueno(int k) {
 		return combinatoriaDinamica(n, k) * Polinomio.potenciaPar(a, k) *
 				Polinomio.potenciaPar(b, n-k);
+	}
+	public double getTermino(int k) {
+		return combinatoria(n, k) * Polinomio.potencia(a, k) *
+				Polinomio.potencia(b, n-k);
 	}
 	
 	

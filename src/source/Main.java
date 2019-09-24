@@ -16,9 +16,27 @@ public class Main {
 //		System.out.println("Resultado: " + res);
 //		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni) + " nanosegundos.");
 //		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni)*Math.pow(10, -9) + " segundos.");
-		BinomioDeNewton bdn = new BinomioDeNewton(10, 20, 2);
-		System.out.println(bdn.factorial(7));
-
+		BinomioDeNewton bdn = new BinomioDeNewton(1, 2, 10);
+		int n = 10, k = 5;
+		System.out.println(bdn.combinatoria(n, k));
+		long tIni = System.nanoTime();
+		long tFin = System.nanoTime();
+		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni)*Math.pow(10, -9) + " segundos.");
+		tIni = System.nanoTime();
+		System.out.println(bdn.combinatoriaDinamica(n, k));
+		tFin = System.nanoTime();
+		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni)*Math.pow(10, -9) + " segundos.");
+		
+		
+		tIni = System.nanoTime();
+		System.out.println(bdn.getTermino(k));
+		tFin = System.nanoTime();
+		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni)*Math.pow(10, -9) + " segundos.");
+		
+		tIni = System.nanoTime();
+		System.out.println(bdn.getTerminoBueno(k));
+		tFin = System.nanoTime();
+		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni)*Math.pow(10, -9) + " segundos.");
 		
 	}
 }
