@@ -18,25 +18,14 @@ public class Main {
 //		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni)*Math.pow(10, -9) + " segundos.");
 		BinomioDeNewton bdn = new BinomioDeNewton(1, 2, 10);
 		int n = 10, k = 5;
-		System.out.println(bdn.combinatoria(n, k));
-		long tIni = System.nanoTime();
-		long tFin = System.nanoTime();
-		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni)*Math.pow(10, -9) + " segundos.");
-		tIni = System.nanoTime();
-		System.out.println(bdn.combinatoriaDinamica(n, k));
-		tFin = System.nanoTime();
-		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni)*Math.pow(10, -9) + " segundos.");
+		BinomioDeNewton b1 = new BinomioDeNewton(1, 2, 10);
+		BinomioDeNewton b2 = new BinomioDeNewton(3.5, 2, 6);
+		BinomioDeNewton b3 = new BinomioDeNewton(2, 4.5, 4);
+		BinomioDeNewton b4 = new BinomioDeNewton(1.5, 3, 5);
 		
-		
-		tIni = System.nanoTime();
-		System.out.println(bdn.getTermino(k));
-		tFin = System.nanoTime();
-		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni)*Math.pow(10, -9) + " segundos.");
-		
-		tIni = System.nanoTime();
-		System.out.println(bdn.getTerminoBueno(k));
-		tFin = System.nanoTime();
-		System.out.println("Tiempo de ejecuciòn: " + (tFin-tIni)*Math.pow(10, -9) + " segundos.");
-		
+		System.out.println(b1.getTerminoBueno(k));
+		System.out.println(b2.getTerminoBueno(4));
+		System.out.println(b3.getTerminoBueno(2));
+		System.out.println(b4.getTerminoBueno(3));
 	}
 }

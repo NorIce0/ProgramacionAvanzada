@@ -53,7 +53,7 @@ public class Polinomio {
 		return (n>0)?x*potencia(x, n-1):1;
 	}
 	
-	static double potenciaPar(double x, int n) {
+	public static double potenciaPar(double x, int n) {
 		
 		if(n%2==0 && n!=0)
 			return potenciaPar(x*x, n/2);
